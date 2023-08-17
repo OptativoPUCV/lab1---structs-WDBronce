@@ -136,6 +136,7 @@ int checkSorted(int arr[], int size)
           return orden;
         }
       }
+    }
 
       if(orden > 0)
       {
@@ -144,7 +145,7 @@ int checkSorted(int arr[], int size)
       }
       orden = -1;
       return orden;
-    }
+    
 }
 
 /*
