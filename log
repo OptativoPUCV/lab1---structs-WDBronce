@@ -146,3 +146,14 @@ exercises.c:140:1: error: control reaches end of non-void function [-Werror=retu
 cc1: all warnings being treated as errors
 Compilation failed
 542b234
+Thu 17 Aug 2023 11:45:45 PM UTC: 
+ exercises.c | 13 +++++--------
+ 1 file changed, 5 insertions(+), 8 deletions(-)
+In file included from test.c:1:
+exercises.c: In function ‘checkSorted’:
+exercises.c:126:31: error: suggest parentheses around comparison in operand of ‘==’ [-Werror=parentheses]
+  126 |       if(ordenASC == ordenDES > 0)
+      |                      ~~~~~~~~~^~~
+cc1: all warnings being treated as errors
+Compilation failed
+70ab5dd
