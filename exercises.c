@@ -56,16 +56,17 @@ los números pares del arreglo original.
 */
 int *filterEvenNumbers(int lista[], int tamano, int *nuevoTam) 
 {
-  int *listaPar = (int*)malloc(tamano * sizeof(int));;
-  *nuevoTam = 0;
+  int *listaPar = (int*)malloc(tamano * sizeof(int));
+  int aux = 0;
   for(int i = 0; i<tamano ;i++)
     {
       if(lista[i] % 2 == 0)
       {
-        listaPar[*nuevoTam] = lista[i];
-        nuevoTam++;
+        listaPar[aux] = lista[i];
+        aux++;
       }
     }
+  *nuevoTam = aux;
   return listaPar;
 }
 
@@ -84,7 +85,7 @@ void mergeSortedArrays(int arr1[], int size1, int arr2[], int size2, int result[
   j = 0;
   while (i<size1 && k<size2)
   {
-    if(arr1[i] > arr2[k])
+    if(arr1[i] <= arr2[k])
     {
       result[j] = arr1[i];
       j++;
@@ -96,11 +97,11 @@ void mergeSortedArrays(int arr1[], int size1, int arr2[], int size2, int result[
       j++;
       result[j] = arr1[i];
     }
-    if(i <= size1)
+    if(i < size1)
     {
       i++;
     }
-    if(k <= size2)
+    if(k < size2)
     {
       k++;
     }
