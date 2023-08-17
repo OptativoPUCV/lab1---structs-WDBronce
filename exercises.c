@@ -97,6 +97,8 @@ void mergeSortedArrays(int arr1[], int size1, int arr2[], int size2, int result[
       j++;
       result[j] = arr1[i];
     }
+    j++;
+  
     if(i < size1)
     {
       i++;
@@ -106,6 +108,7 @@ void mergeSortedArrays(int arr1[], int size1, int arr2[], int size2, int result[
       k++;
     }
   }
+  
 }
 
 /*
@@ -169,10 +172,10 @@ typedef struct {
 void inicializarLibro(Libro *libro, const char *titulo, const char *nombreAutor,int anioNacimiento, int anioPublicacion) 
 {
   strcpy(libro->titulo, titulo);
-  anioPublicacion = libro->anioPublicacion;
+  libro->anioPublicacion = anioPublicacion ;
   
   strcpy(libro->autor.nombre, nombreAutor);
-  anioNacimiento = libro->autor.anioNacimiento;
+  libro->autor.anioNacimiento = anioNacimiento;
 }
 
 /*
