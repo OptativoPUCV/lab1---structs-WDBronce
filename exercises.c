@@ -12,11 +12,11 @@ y su tamaño, y devuelva el valor más grande del arreglo.
 int findMax(int lista[], int tamano)
 {
   int mayor = lista[0];
-  for (int i = 0; i < tamano-1; i++)
+  for (int i = 0; i < tamano; i++)
     {
-      if(lista[i] < lista[i+1])
+      if(mayor < lista[i])
       {
-        mayor = lista[i+1];
+        mayor = lista[i];
       }
     }
   return mayor;
@@ -32,7 +32,7 @@ invierta el orden de sus elementos.
 void reverseArray(int lista[], int tamano)
 {
   int listaAux[tamano];
-  int aux = tamano;
+  int aux = tamano-1;
   
   for(int q=0; q < tamano ;q++)
     {
