@@ -89,3 +89,9 @@ exercises.c:116:19: error: ‘aux’ may be used uninitialized in this function 
 cc1: all warnings being treated as errors
 Compilation failed
 d511ef7
+Thu 17 Aug 2023 11:23:59 PM UTC: 
+ exercises.c | 1 +
+ 1 file changed, 1 insertion(+)
+ tests:  0|2
+total_score: 50/70
+50d60ff
