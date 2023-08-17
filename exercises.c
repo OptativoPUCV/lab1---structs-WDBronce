@@ -89,7 +89,7 @@ void mergeSortedArrays(int arr1[], int size1, int arr2[], int size2, int result[
     {
       result[j] = arr1[i];
       j++;
-      if (i<size1)
+      if (i<size1-1)
       {
         i++;
       }
@@ -98,7 +98,7 @@ void mergeSortedArrays(int arr1[], int size1, int arr2[], int size2, int result[
     {
       result[j] = arr2[k];
       j++;
-      if (k<size2)
+      if (k<size2-1)
       {
         k++;
       }
@@ -114,34 +114,32 @@ y luego devuelva 1 si el arreglo está ordenado en orden ascendente,
 */
 int checkSorted(int arr[], int size) 
 {
-  int orden = 0;
+  int ordenASC = 0, ordenDES = 0;
   for(int i = 1; i<size ; i++)
     {
       if(arr[i-1] <= arr[i])
       {
-        orden = 1;
+        ordenASC++;
       }
       else
       {
-        orden = -1;
+        ordenDES++;;
       }
-    }
-
-      if(orden == 0)
+      if(ordenASC > 0 && ordenDES > 0)
       {
         return 0;
       }
-      else
+    }
+
+      if(ordenASC > 0 && ordenDES == 0)
       {
-        if(orden > 0)
-        {
-          return 1;
-        }
-        else
-        {
-          return -1;
-        }
+        return 1;
       }
+      if(ordenASC == 0 && ordenDES > 0)
+      {
+        return -1;
+      }
+  return 0;
 }
 
 /*
