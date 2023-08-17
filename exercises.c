@@ -56,7 +56,7 @@ los números pares del arreglo original.
 */
 int *filterEvenNumbers(int lista[], int tamano, int *nuevoTam) 
 {
-  int listaPar[tamano];
+  int *listaPar = (int*)malloc(tamano * sizeof(int));;
   *nuevoTam = 0;
   for(int i = 0; i<tamano ;i++)
     {
@@ -141,10 +141,7 @@ int checkSorted(int arr[], int size)
       {
         return 1;
       }
-      if(orden < 0)
-      {
-        return -1;
-      }
+      return -1;
     }
 }
 
