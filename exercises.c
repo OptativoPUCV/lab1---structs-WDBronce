@@ -130,7 +130,7 @@ int checkSorted(int arr[], int size)
       else
       {
         orden--;
-        if(arr[i] > arr[i+1])
+        if(arr[i] < arr[i+1])
         {
           return 0;
         }
@@ -139,12 +139,12 @@ int checkSorted(int arr[], int size)
 
       if(orden > 0)
       {
-        orden = 1;
-        return orden;
+        return 1;
       }
-      orden = -1;
-      return orden;
-    
+      else
+      {
+        return -1;
+      }
 }
 
 /*
