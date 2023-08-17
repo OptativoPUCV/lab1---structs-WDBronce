@@ -89,17 +89,20 @@ void mergeSortedArrays(int arr1[], int size1, int arr2[], int size2, int result[
     {
       result[j] = arr1[i];
       j++;
-    
-      i++;
+      if(i != size1)
+      {
+        i++;
+      }
       
     }
     else
     {
       result[j] = arr2[k];
       j++;
-     
+      if(k != size2)
+      {
         k++;
-      
+      }
     }
   }
 }
@@ -115,11 +118,11 @@ int checkSorted(int arr[], int size)
   int ordenASC = 1, ordenDES = 1;
   for(int i = 1; i<size ; i++)
     {
-      if(arr[i-1] <= arr[i])
+      if(arr[i-1] < arr[i])
       {
         ordenASC = 0;
       }
-      else
+      if(arr[i-1] > arr[i])
       {
         ordenDES = 0;
       }
