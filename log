@@ -95,3 +95,14 @@ Thu 17 Aug 2023 11:23:59 PM UTC:
  tests:  0|2
 total_score: 50/70
 50d60ff
+Thu 17 Aug 2023 11:29:14 PM UTC: 
+ exercises.c | 19 +------------------
+ 1 file changed, 1 insertion(+), 18 deletions(-)
+In file included from test.c:1:
+exercises.c: In function ‘mergeSortedArrays’:
+exercises.c:82:13: error: variable ‘aux’ set but not used [-Werror=unused-but-set-variable]
+   82 |   int i,k,j,aux;
+      |             ^~~
+cc1: all warnings being treated as errors
+Compilation failed
+71aa016
