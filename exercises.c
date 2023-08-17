@@ -139,9 +139,11 @@ int checkSorted(int arr[], int size)
 
       if(orden > 0)
       {
-        return 1;
+        orden = 1;
+        return orden;
       }
-      return -1;
+      orden = -1;
+      return orden;
     }
 }
 
