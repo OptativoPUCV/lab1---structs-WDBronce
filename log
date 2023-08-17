@@ -157,3 +157,9 @@ exercises.c:126:31: error: suggest parentheses around comparison in operand of â
 cc1: all warnings being treated as errors
 Compilation failed
 70ab5dd
+Thu 17 Aug 2023 11:46:00 PM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  0|2
+total_score: 50/70
+c757b4f

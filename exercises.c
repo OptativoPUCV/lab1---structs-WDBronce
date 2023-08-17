@@ -123,7 +123,7 @@ int checkSorted(int arr[], int size)
       {
         ordenDES = 0;
       }
-      if(ordenASC == ordenDES > 0)
+      if(ordenASC == ordenDES)
       {
         return 0;
       }
