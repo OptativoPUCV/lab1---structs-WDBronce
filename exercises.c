@@ -79,7 +79,7 @@ arreglos en un tercer arreglo también ordenado.
 */
 void mergeSortedArrays(int arr1[], int size1, int arr2[], int size2, int result[])
 {
-  int i,k,j;
+  int i,k,j,aux;
   i = 0;
   k = 0;
   j = 0;
@@ -108,7 +108,13 @@ void mergeSortedArrays(int arr1[], int size1, int arr2[], int size2, int result[
       k++;
     }
   }
-  
+  for(int z = 0; z<j-1 ; z++)
+    {
+      if(result[z] > result[z+1])
+      aux = result[z];
+      result[z] = result[z+1];
+      result[z+1] = aux;
+    }
 }
 
 /*
@@ -127,7 +133,7 @@ int checkSorted(int arr[], int size)
         orden++;
         if(arr[i] > arr[i+1])
         {
-          return 0;
+          orden = 0;
         }
       }
       else
@@ -135,18 +141,25 @@ int checkSorted(int arr[], int size)
         orden--;
         if(arr[i] < arr[i+1])
         {
-          return 0;
+          orden = 0;
         }
       }
     }
 
-      if(orden > 0)
+      if(orden == 0)
       {
-        return 1;
+        return orden;
       }
       else
       {
-        return -1;
+        if(orden > 0)
+        {
+          return 1;
+        }
+        else
+        {
+          return -1;
+        }
       }
 }
 

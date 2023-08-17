@@ -78,3 +78,14 @@ Thu 17 Aug 2023 11:17:12 PM UTC:
  tests:  0|2
 total_score: 50/70
 a92431b
+Thu 17 Aug 2023 11:23:25 PM UTC: 
+ exercises.c | 21 +++++++++++++++++----
+ 1 file changed, 17 insertions(+), 4 deletions(-)
+In file included from test.c:1:
+exercises.c: In function ‘mergeSortedArrays’:
+exercises.c:116:19: error: ‘aux’ may be used uninitialized in this function [-Werror=maybe-uninitialized]
+  116 |       result[z+1] = aux;
+      |       ~~~~~~~~~~~~^~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+d511ef7
